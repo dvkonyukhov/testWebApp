@@ -30,7 +30,7 @@ public class CookiesServlet extends HttpServlet {
         System.out.println(allVisitsCounts);
 
         Cookie[] cookies = req.getCookies();
-        int cookiesVisitsCounts = 0;
+        int cookiesVisitsCounts = 1;
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 if (cookieName.equals(cookie.getName())) {
@@ -43,7 +43,7 @@ public class CookiesServlet extends HttpServlet {
             }
         }
 
-        if (cookiesVisitsCounts == 0) {
+        if (cookiesVisitsCounts == 1) {
             setCookie(resp, cookiesVisitsCounts);
         }
 
